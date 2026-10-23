@@ -1,64 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — minmj</title>
-<meta name="description" content="Projects planted and tended in the garden.">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects · minmj</title>
+  <meta name="description" content="Things minmj has planted: Sprout and Budgeting App.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
 
-<nav class="nav">
-  <div class="brand">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-    minmj
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html" aria-current="page">Projects</a></li>
-  </ul>
-</nav>
+    <header class="spine">
+      <a class="wordmark" href="index.html">minmj</a>
+    </header>
 
-<header class="page-header">
-  <span class="eyebrow">🦋 the full trellis</span>
-  <h1>Everything I've planted.</h1>
-  <p>Projects big and small — some still climbing, a few gone to seed. Each one started as a single idea worth watering.</p>
-</header>
+    <main class="main" id="main">
 
-<section>
-  <div class="cards full">
-    <article class="card">
-      <div class="card-art"><span class="tag">Web app</span></div>
-      <div class="card-body">
-        <h3>Sprout</h3>
-        <p>A pastel-green fitness, meal, and habit tracker. Meals, recipes, water, exercise, habits, and mood — all stored locally, no account or backend required.</p>
-        <a class="card-link" href="https://github.com/Minmj/sprout_fitness" target="_blank" rel="noopener">View on GitHub →</a>
+      <nav class="topnav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+      </nav>
+
+      <div class="titleblock">
+        <div class="tb-project">
+          <div class="tb-label">Sheet 03</div>
+          <div class="tb-name">on the trellis</div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Planted</div>
+          <div class="tb-value">2 projects</div>
+        </div>
+        <div class="tb-cell tb-status">
+          <div class="tb-label">Status</div>
+          <div class="tb-value">In bloom</div>
+        </div>
       </div>
-    </article>
-    <article class="card">
-      <div class="card-art"><span class="tag">Web app</span></div>
-      <div class="card-body">
-        <h3>Budgeting App</h3>
-        <p>A budgeting app for tracking spending and staying on top of monthly goals.</p>
-        <a class="card-link" href="https://github.com/Minmj/BudgetApp" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-    </article>
-  </div>
-</section>
 
-<footer id="contact">
-  <div class="foot-wrap">
-    <div class="brand" style="font-size:1.05rem;">
-      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-      minmj
-    </div>
-    <ul class="foot-links">
-      <li><a href="https://github.com/minmj" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+      <section class="hero">
+        <div class="plot">
+          <span class="plot-label">PLOT C · THE TRELLIS</span>
+          <div class="eyebrow">// what I'm building right now</div>
+          <h1>Things I've <em>planted.</em></h1>
+          <p class="lede">Small web apps, tended slowly. Both keep your data on your device and need no account.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Projects">
+        <div class="tags">
+          <div class="tag-wrap">
+            <div class="string"></div>
+            <article class="tag">
+              <img src="assets/sprout-card.svg" alt="" width="400" height="206">
+              <div class="tag-body">
+                <h3>Sprout</h3>
+                <p>A pastel-green fitness, meal, and habit tracker covering meals, recipes, water, exercise, habits, and mood. Local-first: everything is stored on your device — no account, no backend.</p>
+                <a class="tag-link" href="https://github.com/Minmj/sprout_fitness">View on GitHub →</a>
+              </div>
+            </article>
+          </div>
+          <div class="tag-wrap">
+            <div class="string"></div>
+            <article class="tag">
+              <img src="assets/budgeting-app-card.svg" alt="" width="400" height="206">
+              <div class="tag-body">
+                <h3>Budgeting App</h3>
+                <p>A budgeting app for tracking spending and staying on top of monthly goals.</p>
+                <a class="tag-link" href="https://github.com/Minmj/BudgetApp">View on GitHub →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>minmj</div>
+        <a href="https://github.com/minmj">GitHub</a>
+        <div>© 2026 minmj. Tended with care.</div>
+      </footer>
+
+    </main>
   </div>
-  <p class="foot-note" style="max-width:1080px;margin:20px auto 0;">© 2026 minmj. Tended with care.</p>
-</footer>
 </body>
 </html>

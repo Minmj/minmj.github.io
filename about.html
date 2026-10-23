@@ -1,61 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — minmj</title>
-<meta name="description" content="About the gardener behind minmj.">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About · minmj</title>
+  <meta name="description" content="About minmj — a gardener who builds small, well-tended web apps and tools.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
 
-<nav class="nav">
-  <div class="brand">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-    minmj
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html" aria-current="page">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-</nav>
+    <header class="spine">
+      <a class="wordmark" href="index.html">minmj</a>
+    </header>
 
-<header class="page-header">
-  <span class="eyebrow">🌿 the gardener</span>
-  <h1>Hi, I'm glad you wandered in.</h1>
-</header>
+    <main class="main" id="main">
 
-<section>
-  <div class="prose">
-    <h2>What I do</h2>
-    <p>I build small, well-tended things — web apps, tools, and the occasional library — and I write about the process along the way. I like projects that stay small on purpose: easier to understand, easier to keep alive.</p>
-    <h2>How I got here</h2>
-    <p>Like most of what's planted here, it started small: a project I wanted to exist, so I built it. That habit of starting minimal and letting things grow only as far as they need to is still how I work today.</p>
-    <h2>What I'm into right now</h2>
-    <p>Local-first apps that don't ask for an account, small tracked-in-git tools, and finding the smallest possible version of an idea before building it.</p>
-  </div>
-  <div class="skills">
-    <span class="skill">JavaScript</span>
-    <span class="skill">React</span>
-    <span class="skill">Vite</span>
-    <span class="skill">CSS / Tailwind</span>
-    <span class="skill">Design Systems</span>
-    <span class="skill">Accessibility</span>
-  </div>
-</section>
+      <nav class="topnav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
 
-<footer id="contact">
-  <div class="foot-wrap">
-    <div class="brand" style="font-size:1.05rem;">
-      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-      minmj
-    </div>
-    <ul class="foot-links">
-      <li><a href="https://github.com/minmj" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+      <div class="titleblock">
+        <div class="tb-project">
+          <div class="tb-label">Sheet 02</div>
+          <div class="tb-name">about the plot</div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Planted</div>
+          <div class="tb-value">2021</div>
+        </div>
+        <div class="tb-cell tb-status">
+          <div class="tb-label">Status</div>
+          <div class="tb-value">In bloom</div>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="plot">
+          <span class="plot-label">PLOT B · THE GARDENER</span>
+          <div class="eyebrow">// small on purpose</div>
+          <h1>A gardener who builds <em>small things.</em></h1>
+          <p class="lede">I build small web apps, tools, and the occasional library, and write about the process. I favor projects that stay small on purpose.</p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="notes-h">
+        <div class="section-head">
+          <div>
+            <div class="sheet">NOTES</div>
+            <h2 id="notes-h">How the garden <em>grew.</em></h2>
+          </div>
+        </div>
+        <div class="beds">
+          <div class="plot bed bed-pink">
+            <span class="plot-label">BED 1</span>
+            <h3>What I do</h3>
+            <p>Small web apps, tools, and occasional libraries — plus writing about how they get made.</p>
+          </div>
+          <div class="plot bed bed-green">
+            <span class="plot-label">BED 2</span>
+            <h3>How I got here</h3>
+            <p>I started by building a project I wanted to exist. That minimal, grow-as-needed approach still guides my work.</p>
+          </div>
+          <div class="plot bed bed-butter">
+            <span class="plot-label">BED 3</span>
+            <h3>Current interests</h3>
+            <p>Local-first apps that don't need an account, small git-tracked tools, and finding the smallest version of an idea before building it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="tools-h">
+        <div class="section-head">
+          <div>
+            <div class="sheet">TOOLSHED</div>
+            <h2 id="tools-h">What's in the <em>shed.</em></h2>
+          </div>
+        </div>
+        <ul class="skills">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Vite</li>
+          <li>CSS / Tailwind</li>
+          <li>Design Systems</li>
+          <li>Accessibility</li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-solid" href="projects.html">See the garden
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a class="btn" href="https://github.com/minmj">GitHub</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>minmj</div>
+        <a href="https://github.com/minmj">GitHub</a>
+        <div>© 2026 minmj. Tended with care.</div>
+      </footer>
+
+    </main>
   </div>
-  <p class="foot-note" style="max-width:1080px;margin:20px auto 0;">© 2026 minmj. Tended with care.</p>
-</footer>
 </body>
 </html>
