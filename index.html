@@ -1,137 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>minmj</title>
-<meta name="description" content="Personal site and project garden — pink, floral, and a little bit playful.">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>minmj</title>
+  <meta name="description" content="Personal site and project garden — pink, floral, and a little bit playful.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,400;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="shell">
 
-<nav class="nav">
-  <div class="brand">
-    <svg viewBox="0 0 24 24" fill="none"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-    minmj
-  </div>
-  <ul class="nav-links">
-    <li><a href="index.html" aria-current="page">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-</nav>
+    <header class="spine">
+      <a class="wordmark" href="index.html">minmj</a>
+    </header>
 
-<header class="hero">
-  <div class="hero-inner">
-    <div>
-      <span class="eyebrow">🌸 hand-tended since 2021</span>
-      <h1>Code that grows<br>like a <em>garden.</em></h1>
-      <p>I'm a developer who plants small, tends often, and lets ideas climb. This is where projects bloom and the occasional butterfly wanders through.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="projects.html">See the garden →</a>
-        <a class="btn btn-ghost" href="about.html">About me</a>
+    <main class="main" id="main">
+
+      <nav class="topnav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+
+      <div class="titleblock">
+        <div class="tb-project">
+          <div class="tb-label">Project</div>
+          <div class="tb-name">minmj garden plan</div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Planted</div>
+          <div class="tb-value">2021</div>
+        </div>
+        <div class="tb-cell">
+          <div class="tb-label">Sheets</div>
+          <div class="tb-value">01 — 03</div>
+        </div>
+        <div class="tb-cell tb-status">
+          <div class="tb-label">Status</div>
+          <div class="tb-value">In bloom</div>
+        </div>
       </div>
-    </div>
-    <div class="hero-plot" aria-hidden="true">
-      <svg viewBox="0 0 200 200" fill="none">
-        <ellipse cx="100" cy="170" rx="70" ry="10" fill="var(--leaf-soft)"/>
-        <path d="M100 170 C 95 120, 105 90, 100 50" stroke="var(--leaf)" stroke-width="4" stroke-linecap="round"/>
-        <path d="M100 130 C 80 122, 65 128, 55 115" stroke="var(--leaf)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        <path d="M100 105 C 120 98, 135 104, 145 90" stroke="var(--leaf)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-        <g transform="translate(100 45)">
-          <circle r="11" fill="var(--accent)"/>
-          <circle cx="16" cy="6" r="11" fill="var(--accent-soft)"/>
-          <circle cx="16" cy="-14" r="11" fill="var(--accent)"/>
-          <circle cx="-4" cy="-18" r="11" fill="var(--accent-soft)"/>
-          <circle cx="-18" cy="-2" r="11" fill="var(--accent)"/>
-          <circle r="6" fill="var(--leaf)"/>
-        </g>
-        <g transform="translate(55 112)">
-          <circle r="8" fill="var(--sky)"/>
-          <circle cx="11" cy="4" r="8" fill="var(--accent-soft)"/>
-          <circle cx="-2" cy="-11" r="8" fill="var(--sky)"/>
-          <circle r="4" fill="var(--leaf)"/>
-        </g>
-        <g transform="translate(147 88)">
-          <circle r="7" fill="var(--accent)"/>
-          <circle cx="9" cy="3" r="7" fill="var(--sky)"/>
-          <circle cx="-2" cy="-9" r="7" fill="var(--accent-soft)"/>
-          <circle r="3.5" fill="var(--leaf)"/>
-        </g>
-      </svg>
-    </div>
-    <div class="bfly b1"><svg viewBox="0 0 32 24" fill="var(--accent)"><path d="M16 12c-2-8-9-11-13-8-3 3 1 9 8 9-7 1-10 7-7 10 4 3 10-2 12-11Zm0 0c2-8 9-11 13-8 3 3-1 9-8 9 7 1 10 7 7 10-4 3-10-2-12-11Z"/><line x1="16" y1="4" x2="16" y2="20" stroke="var(--leaf)" stroke-width="1.4"/></svg></div>
-    <div class="bfly b2"><svg viewBox="0 0 32 24" fill="var(--sky)"><path d="M16 12c-2-8-9-11-13-8-3 3 1 9 8 9-7 1-10 7-7 10 4 3 10-2 12-11Zm0 0c2-8 9-11 13-8 3 3-1 9-8 9 7 1 10 7 7 10-4 3-10-2-12-11Z"/><line x1="16" y1="4" x2="16" y2="20" stroke="var(--leaf)" stroke-width="1.4"/></svg></div>
-    <div class="bfly b3"><svg viewBox="0 0 32 24" fill="var(--accent-soft)"><path d="M16 12c-2-8-9-11-13-8-3 3 1 9 8 9-7 1-10 7-7 10 4 3 10-2 12-11Zm0 0c2-8 9-11 13-8 3 3-1 9-8 9 7 1 10 7 7 10-4 3-10-2-12-11Z"/><line x1="16" y1="4" x2="16" y2="20" stroke="var(--leaf)" stroke-width="1.4"/></svg></div>
-  </div>
 
-  <svg class="vine" viewBox="0 0 1080 40" preserveAspectRatio="none" aria-hidden="true">
-    <path d="M0 20 Q 60 0 120 20 T 240 20 T 360 20 T 480 20 T 600 20 T 720 20 T 840 20 T 960 20 T 1080 20" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/>
-  </svg>
-</header>
+      <section class="hero">
+        <div class="plot">
+          <span class="plot-label">PLOT A · ENTRANCE</span>
+          <div class="eyebrow">// hand-tended since 2021</div>
+          <h1>Code that grows like a <em>garden.</em></h1>
+          <p class="lede">I'm a developer who plants small, tends often, and lets ideas climb. This is where projects bloom and the occasional butterfly wanders through.</p>
+          <div class="btn-row">
+            <a class="btn btn-solid" href="projects.html">See the garden
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn" href="about.html">About me</a>
+          </div>
+        </div>
 
-<section id="about">
-  <div class="section-head">
-    <span class="eyebrow">🌿 about the plot</span>
-    <h2>Three beds, one gardener.</h2>
-    <p>A short tour of how I work, what I'm growing, and where new seeds get started. <a href="about.html" style="color:var(--accent);font-weight:700;">Read the full story →</a></p>
-  </div>
-  <div class="beds">
-    <div class="bed">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M12 21V11" stroke="var(--leaf)" stroke-width="2" stroke-linecap="round"/><path d="M12 11C12 11 5 10 5 4C11 4 12 11 12 11Z" fill="var(--accent-soft)"/><path d="M12 11C12 11 19 10 19 4C13 4 12 11 12 11Z" fill="var(--accent)"/></svg>
-      <h3>What I grow</h3>
-      <p>Small web tools, design systems, and the occasional overgrown side project.</p>
-    </div>
-    <div class="bed">
-      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="9" r="5" fill="var(--accent)"/><path d="M12 14V21M9 21H15" stroke="var(--leaf)" stroke-width="2" stroke-linecap="round"/></svg>
-      <h3>How I tend</h3>
-      <p>Slow, deliberate commits. I'd rather prune than rush a harvest.</p>
-    </div>
-    <div class="bed">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M4 12c2-6 14-6 16 0-2 6-14 6-16 0Z" fill="var(--sky)"/><circle cx="12" cy="12" r="2.4" fill="var(--surface)"/></svg>
-      <h3>Where to find me</h3>
-      <p>Mostly here, sometimes in the issues tab of someone else's garden.</p>
-    </div>
-  </div>
-</section>
+        <aside class="legend" aria-label="garden.js">
+          <div class="legend-bar"><span>LEGEND · garden.js</span><span>rev. A</span></div>
+<pre><code id="code"></code></pre>
+        </aside>
+      </section>
 
-<section id="projects" class="trellis-section">
-  <div class="section-head">
-    <span class="eyebrow">🦋 on the trellis</span>
-    <h2>Things I've planted.</h2>
-    <p>What I'm building right now. <a href="projects.html" style="color:var(--accent);font-weight:700;">See them all →</a></p>
-  </div>
-  <div class="cards">
-    <article class="card">
-      <div class="card-art"><span class="tag">Web app</span></div>
-      <div class="card-body">
-        <h3>Sprout</h3>
-        <p>A pastel-green fitness, meal, and habit tracker — local-first, no account, no backend.</p>
-        <a class="card-link" href="https://github.com/Minmj/sprout_fitness" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-    </article>
-    <article class="card">
-      <div class="card-art"><span class="tag">Web app</span></div>
-      <div class="card-body">
-        <h3>Budgeting App</h3>
-        <p>A budgeting app for tracking spending and staying on top of monthly goals.</p>
-        <a class="card-link" href="https://github.com/Minmj/BudgetApp" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-    </article>
-  </div>
-</section>
+      <section class="section" aria-labelledby="about-h">
+        <div class="section-head">
+          <div>
+            <div class="sheet">SHEET 02 — ABOUT THE PLOT</div>
+            <h2 id="about-h">Three beds, <em>one gardener.</em></h2>
+          </div>
+          <p>A short tour of how I work, what I'm growing, and where new seeds get started. <a class="textlink" href="about.html">Read the full story</a></p>
+        </div>
+        <div class="beds">
+          <div class="plot bed bed-pink">
+            <span class="plot-label">BED 1</span>
+            <h3>What I grow</h3>
+            <p>Small web tools, design systems, and the occasional overgrown side project.</p>
+          </div>
+          <div class="plot bed bed-green">
+            <span class="plot-label">BED 2</span>
+            <h3>How I tend</h3>
+            <p>Slow, deliberate commits. I'd rather prune than rush a harvest.</p>
+          </div>
+          <div class="plot bed bed-butter">
+            <span class="plot-label">BED 3</span>
+            <h3>Where to find me</h3>
+            <p>Mostly here, sometimes in the issues tab of someone else's garden.</p>
+          </div>
+        </div>
+      </section>
 
-<footer id="contact">
-  <div class="foot-wrap">
-    <div class="brand" style="font-size:1.05rem;">
-      <svg viewBox="0 0 24 24" fill="none" width="20" height="20"><path d="M12 12C12 12 9 6 12 3C15 6 12 12 12 12Z" fill="var(--accent-soft)"/><path d="M12 12C12 12 18 10.5 20 13.5C18 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 6 10.5 4 13.5C6 16.5 12 12 12 12Z" fill="var(--accent)"/><path d="M12 12C12 12 15 17 12 20.5C9 17 12 12 12 12Z" fill="var(--accent-soft)"/><circle cx="12" cy="12" r="1.6" fill="var(--leaf)"/></svg>
-      minmj
-    </div>
-    <ul class="foot-links">
-      <li><a href="https://github.com/minmj" target="_blank" rel="noopener">GitHub</a></li>
-    </ul>
+      <section class="section" aria-labelledby="proj-h">
+        <div class="section-head">
+          <div>
+            <div class="sheet">SHEET 03 — ON THE TRELLIS</div>
+            <h2 id="proj-h">Things I've <em>planted.</em></h2>
+          </div>
+          <p>What I'm building right now. <a class="textlink" href="projects.html">See them all</a></p>
+        </div>
+        <div class="tags">
+          <div class="tag-wrap">
+            <div class="string"></div>
+            <article class="tag">
+              <img src="assets/sprout-card.svg" alt="" width="400" height="206">
+              <div class="tag-body">
+                <h3>Sprout</h3>
+                <p>A pastel-green fitness, meal, and habit tracker — local-first, no account, no backend.</p>
+                <a class="tag-link" href="https://github.com/Minmj/sprout_fitness">View on GitHub →</a>
+              </div>
+            </article>
+          </div>
+          <div class="tag-wrap">
+            <div class="string"></div>
+            <article class="tag">
+              <img src="assets/budgeting-app-card.svg" alt="" width="400" height="206">
+              <div class="tag-body">
+                <h3>Budgeting App</h3>
+                <p>A budgeting app for tracking spending and staying on top of monthly goals.</p>
+                <a class="tag-link" href="https://github.com/Minmj/BudgetApp">View on GitHub →</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>minmj</div>
+        <a href="https://github.com/minmj">GitHub</a>
+        <div>© 2026 minmj. Tended with care.</div>
+      </footer>
+
+    </main>
   </div>
-  <p class="foot-note" style="max-width:1080px;margin:20px auto 0;">© 2026 minmj. Tended with care.</p>
-</footer>
+  <script src="assets/typewriter.js"></script>
+  <script>
+    typewriter(document.getElementById('code'), [
+      [{t:'const ', c:'k'},{t:'garden', c:null},{t:' = ', c:null},{t:'new ', c:'k'},{t:'Garden', c:'f'},{t:'(', c:null},{t:'"minmj"', c:'s'},{t:');', c:null}],
+      [{t:'garden.', c:null},{t:'plant', c:'f'},{t:'(', c:null},{t:'"small ideas"', c:'s'},{t:');', c:null}],
+      [{t:'garden.', c:null},{t:'tend', c:'f'},{t:'({ pace: ', c:null},{t:'"slow"', c:'s'},{t:' });', c:null}],
+      [{t:'garden.', c:null},{t:'prune', c:'f'},{t:'();', c:null},{t:' // before rushing a harvest', c:'c'}],
+      [{t:'await ', c:'k'},{t:'garden.', c:null},{t:'bloom', c:'f'},{t:'();', c:null}]
+    ]);
+  </script>
 </body>
 </html>
