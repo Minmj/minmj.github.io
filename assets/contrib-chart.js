@@ -54,6 +54,12 @@
     container.appendChild(legend);
   }
 
+  function lastSixMonths(days) {
+    var cutoff = new Date();
+    cutoff.setUTCDate(cutoff.getUTCDate() - 182); // ~26 weeks
+    return days.filter(function (d) { return new Date(d.date + 'T00:00:00Z') >= cutoff; });
+  }
+
   var el = document.getElementById('contrib-chart');
   if (!el) return;
 
@@ -61,7 +67,9 @@
     .then(function (res) { if (!res.ok) throw new Error('bad status'); return res.json(); })
     .then(function (data) {
       if (!data || !Array.isArray(data.contributions) || !data.contributions.length) throw new Error('no data');
-      render(el, data.contributions);
+      var recent = lastSixMonths(data.contributions);
+      if (!recent.length) throw new Error('no recent data');
+      render(el, recent);
     })
     .catch(function () {
       el.closest('.section').style.display = 'none';
