@@ -130,7 +130,7 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 
 /* ---------- butterflies ---------- */
 .bfly { position: absolute; z-index: 2; pointer-events: none; animation: drift 13s ease-in-out infinite; }
-.bfly svg { display: block; animation: flap 0.9s ease-in-out infinite; transform-origin: center; }
+.bfly svg { display: block; width: 100%; height: auto; animation: flap 0.9s ease-in-out infinite; transform-origin: center; }
 .bfly.b1 { top: 10%; left: 6%; width: 28px; animation-duration: 16s; }
 .bfly.b2 { top: 60%; left: 90%; width: 22px; animation-duration: 12s; animation-delay: -4s; }
 .bfly.b3 { top: 78%; left: 14%; width: 20px; animation-duration: 14s; animation-delay: -8s; }
