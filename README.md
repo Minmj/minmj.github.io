@@ -55,3 +55,8 @@ just `git revert` the install commit.)
 - Adding a project: copy a `.tag-wrap` block in `projects.html` and `index.html`.
 - The fonts load from Google Fonts; offline previews fall back to Georgia,
   system sans and a system monospace.
+- `styles.css`, `assets/typewriter.js`, and `assets/contrib-chart.js` are
+  linked with a `?v=N` query string in each HTML page. Bump that number
+  (e.g. `?v=4` → `?v=5`) whenever you change one of those files, so GitHub
+  Pages' CDN and visitors' browsers fetch the new version immediately
+  instead of serving a stale cached copy.
