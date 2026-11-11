@@ -195,6 +195,7 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 .contrib-grid { display: flex; gap: 3px; width: max-content; margin: 0 auto; }
 .contrib-col { display: flex; flex-direction: column; gap: 3px; }
 .contrib-cell {
+  display: inline-block; flex: none;
   width: 11px; height: 11px; border-radius: 2px;
   background: var(--paper-2); border: 1px solid var(--grid);
 }

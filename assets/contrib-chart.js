@@ -17,6 +17,17 @@
     return weeks;
   }
 
+  function levelFor(day) {
+    var lvl = Number(day.level);
+    if (lvl >= 0 && lvl <= 4) return lvl;
+    var count = Number(day.count) || 0;
+    if (count <= 0) return 0;
+    if (count <= 3) return 1;
+    if (count <= 6) return 2;
+    if (count <= 9) return 3;
+    return 4;
+  }
+
   function render(container, days) {
     var weeks = buildWeeks(days);
     var grid = document.createElement('div');
@@ -26,7 +37,7 @@
       col.className = 'contrib-col';
       week.forEach(function (day) {
         var cell = document.createElement('span');
-        cell.className = 'contrib-cell' + (day ? ' lvl-' + day.level : ' lvl-empty');
+        cell.className = 'contrib-cell' + (day ? ' lvl-' + levelFor(day) : ' lvl-empty');
         if (day) cell.title = day.count + ' contribution' + (day.count === 1 ? '' : 's') + ' on ' + day.date;
         col.appendChild(cell);
       });
