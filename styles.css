@@ -191,7 +191,8 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 }
 
 /* ---------- almanac (contributions) ---------- */
-.almanac { margin-top: 36px; overflow-x: auto; padding: 28px 28px 24px; }
+.almanac { margin-top: 36px; width: max-content; max-width: 100%; padding: 28px 28px 24px; }
+#contrib-chart { overflow-x: auto; }
 .contrib-grid { display: flex; gap: 4px; width: max-content; margin: 0; }
 .contrib-col { display: flex; flex-direction: column; gap: 4px; }
 .contrib-cell {
