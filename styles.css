@@ -192,7 +192,23 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 
 /* ---------- almanac (contributions) ---------- */
 .almanac { overflow-x: auto; }
-.contrib-chart { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
+.contrib-grid { display: flex; gap: 3px; width: max-content; margin: 0 auto; }
+.contrib-col { display: flex; flex-direction: column; gap: 3px; }
+.contrib-cell {
+  width: 11px; height: 11px; border-radius: 2px;
+  background: var(--paper-2); border: 1px solid var(--grid);
+}
+.contrib-cell.lvl-empty { background: var(--paper-2); border-color: var(--grid); }
+.contrib-cell.lvl-0 { background: var(--paper-2); border-color: var(--grid); }
+.contrib-cell.lvl-1 { background: var(--green); border-color: var(--ink-soft); }
+.contrib-cell.lvl-2 { background: var(--butter); border-color: var(--ink-soft); }
+.contrib-cell.lvl-3 { background: var(--pink); border-color: var(--ink-soft); }
+.contrib-cell.lvl-4 { background: var(--rose); border-color: var(--ink); }
+.contrib-legend {
+  margin-top: 14px; display: flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
+}
+.contrib-legend .contrib-cell { width: 11px; height: 11px; }
 
 /* ---------- about lists ---------- */
 .skills { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
