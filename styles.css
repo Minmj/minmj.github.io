@@ -47,14 +47,17 @@ a:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
   display: flex; flex-wrap: wrap; gap: 0 40px; align-items: stretch;
 }
 .spine {
+  position: relative;
   flex: 0 0 96px;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   padding: 32px 0; border-right: 2px solid var(--ink);
 }
+.spine-top { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.avatar img { display: block; width: 68px; height: 68px; }
 .wordmark {
   writing-mode: vertical-rl; transform: rotate(180deg);
   font-family: var(--serif); font-style: italic; font-weight: 500;
-  font-size: 96px; line-height: 1; letter-spacing: -0.02em;
+  font-size: 88px; line-height: 1; letter-spacing: -0.02em; padding-right: 6px;
 }
 
 .main { flex: 1 1 640px; min-width: 0; padding: 32px 0 64px; }
@@ -70,7 +73,7 @@ a:focus-visible { outline: 3px solid var(--rose); outline-offset: 3px; }
 .topnav a:hover { border-color: var(--ink); }
 
 /* ---------- title block ---------- */
-.titleblock { display: flex; flex-wrap: wrap; border: 2px solid var(--ink); background: var(--paper-2); }
+.titleblock { position: relative; display: flex; flex-wrap: wrap; border: 2px solid var(--ink); background: var(--paper-2); }
 .titleblock > div, .titleblock > a { padding: 16px 20px; border-right: 2px solid var(--ink); }
 .titleblock > :last-child { border-right: 0; }
 .tb-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); }
@@ -123,8 +126,28 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 
 /* ---------- hero grid + code ---------- */
 .hero { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch; }
-.hero .plot { flex: 3 1 520px; min-width: 0; }
+.hero .plot { flex: 3 1 520px; min-width: 0; overflow: hidden; }
+
+/* ---------- butterflies ---------- */
+.bfly { position: absolute; z-index: 2; pointer-events: none; animation: drift 13s ease-in-out infinite; }
+.bfly svg { display: block; animation: flap 0.9s ease-in-out infinite; transform-origin: center; }
+.bfly.b1 { top: 10%; left: 6%; width: 28px; animation-duration: 16s; }
+.bfly.b2 { top: 60%; left: 90%; width: 22px; animation-duration: 12s; animation-delay: -4s; }
+.bfly.b3 { top: 78%; left: 14%; width: 20px; animation-duration: 14s; animation-delay: -8s; }
+.bfly.b4 { top: 14%; left: 80%; width: 18px; animation-duration: 15s; animation-delay: -6s; }
+.bfly.b5 { top: 20%; left: 84%; width: 18px; animation-duration: 13s; animation-delay: -2s; }
+@keyframes drift {
+  0% { transform: translate(0,0) rotate(0deg); }
+  25% { transform: translate(-12px,8px) rotate(-6deg); }
+  50% { transform: translate(6px,-14px) rotate(4deg); }
+  75% { transform: translate(12px,6px) rotate(-3deg); }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+@keyframes flap { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(.72); } }
+@media (prefers-reduced-motion: reduce) { .bfly, .bfly svg { animation: none !important; } }
+
 .legend {
+  position: relative;
   flex: 2 1 340px; min-width: 0; align-self: flex-start;
   border: 2.5px solid var(--ink); background: var(--ink); color: var(--paper);
   box-shadow: 8px 8px 0 var(--rose);
@@ -152,12 +175,13 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 .tag-wrap:nth-child(2) { margin-top: 36px; }
 .string { width: 2px; height: 40px; background: var(--ink); }
 .tag {
+  position: relative;
   width: 100%; border: 2.5px solid var(--ink); background: var(--paper-2);
   box-shadow: 8px 8px 0 var(--ink);
 }
 .tag-wrap:nth-child(1) .tag { transform: rotate(-1deg); }
 .tag-wrap:nth-child(2) .tag { transform: rotate(1.2deg); }
-.tag img { display: block; width: 100%; height: auto; border-bottom: 2px solid var(--ink); }
+.tag .card-art { display: block; width: 100%; height: auto; border-bottom: 2px solid var(--ink); }
 .tag-body { padding: 22px 22px 26px; }
 .tag-body h3 { margin: 0 0 6px; font-family: var(--serif); font-weight: 500; font-size: 36px; line-height: 1.05; }
 .tag-body p { margin: 0; }
@@ -165,6 +189,10 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
   margin-top: 16px; display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--mono); font-weight: 600; color: var(--rose); border-bottom: 2px solid var(--rose);
 }
+
+/* ---------- almanac (contributions) ---------- */
+.almanac { overflow-x: auto; }
+.contrib-chart { display: block; width: 100%; max-width: 760px; height: auto; margin: 0 auto; }
 
 /* ---------- about lists ---------- */
 .skills { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
@@ -179,13 +207,26 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 .footer > :last-child { border-right: 0; flex: 2 1 260px; }
 .footer a:hover { color: var(--rose); }
 
-/* ---------- small screens: spine becomes a top strip, nav wraps ---------- */
+/* ---------- vines: decorative trailing ivy hanging from elements ---------- */
+.vine {
+  position: absolute; left: 0; top: 100%; width: 100%; height: auto; max-width: none;
+  z-index: 3; pointer-events: none; user-select: none;
+}
+.vine-top { top: 0; }
+.vine-hero { width: min(100%, 672px); }
+.vine-spine { left: auto; right: -30px; top: 108px; width: 60px; }
+body { overflow-x: hidden; }
+
+/* ---------- small screens: spine becomes a top bar, nav wraps ---------- */
 @media (max-width: 760px) {
+  .vine { display: none; }
   .shell { padding: 0 16px; gap: 0; }
   .spine {
     flex: 1 1 100%; flex-direction: row;
     padding: 16px 0; border-right: 0; border-bottom: 2px solid var(--ink);
   }
+  .spine-top { flex-direction: row; gap: 14px; }
+  .avatar img { width: 44px; height: 44px; }
   .wordmark { writing-mode: horizontal-tb; transform: none; font-size: 44px; }
   .topnav { justify-content: flex-start; gap: 16px; flex-wrap: wrap; }
   .plot { padding: 40px 22px 28px; }
