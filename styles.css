@@ -191,25 +191,25 @@ h2 { font-size: clamp(36px, 5vw, 60px); line-height: 1; letter-spacing: -0.02em;
 }
 
 /* ---------- almanac (contributions) ---------- */
-.almanac { overflow-x: auto; }
-.contrib-grid { display: flex; gap: 3px; width: max-content; margin: 0 auto; }
-.contrib-col { display: flex; flex-direction: column; gap: 3px; }
+.almanac { overflow-x: auto; padding: 28px 28px 24px; }
+.contrib-grid { display: flex; gap: 4px; width: max-content; margin: 0 auto; }
+.contrib-col { display: flex; flex-direction: column; gap: 4px; }
 .contrib-cell {
   display: inline-block; flex: none;
-  width: 11px; height: 11px; border-radius: 2px;
-  background: var(--paper-2); border: 1px solid var(--grid);
+  width: 14px; height: 14px; border-radius: 2.5px;
+  background: var(--paper-2); border: 1.75px solid var(--ink);
 }
-.contrib-cell.lvl-empty { background: var(--paper-2); border-color: var(--grid); }
-.contrib-cell.lvl-0 { background: var(--paper-2); border-color: var(--grid); }
-.contrib-cell.lvl-1 { background: var(--green); border-color: var(--ink-soft); }
-.contrib-cell.lvl-2 { background: var(--butter); border-color: var(--ink-soft); }
-.contrib-cell.lvl-3 { background: var(--pink); border-color: var(--ink-soft); }
-.contrib-cell.lvl-4 { background: var(--rose); border-color: var(--ink); }
+.contrib-cell.lvl-empty { background: var(--paper-2); }
+.contrib-cell.lvl-0 { background: var(--paper-2); }
+.contrib-cell.lvl-1 { background: var(--green); }
+.contrib-cell.lvl-2 { background: var(--butter); }
+.contrib-cell.lvl-3 { background: var(--pink); }
+.contrib-cell.lvl-4 { background: var(--rose); }
 .contrib-legend {
   margin-top: 14px; display: flex; align-items: center; gap: 6px;
   font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
 }
-.contrib-legend .contrib-cell { width: 11px; height: 11px; }
+.contrib-legend .contrib-cell { width: 14px; height: 14px; }
 
 /* ---------- about lists ---------- */
 .skills { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
